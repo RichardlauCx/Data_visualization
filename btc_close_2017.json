@@ -1,0 +1,17 @@
+[
+  {
+    "data": "2017-01-01",
+    "month": "01",
+    "week": "52",
+    "weekday": "Sunday",
+    "close": "6928.6492"
+  },
+  "--snip--",
+  {
+    "data": "2017-12-12",
+    "month": "12",
+    "week": "50",
+    "weekday": "Tuesday",
+    "close": "113732.6745"
+  }
+]

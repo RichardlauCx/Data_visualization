@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb3cb4b-922b-45ed-a6bf-678a22df2fc1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/btc_close_2017.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitka_weather_12-2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sitka_weather_12-2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temperature_highs_lows.py" beforeDir="false" afterPath="$PROJECT_DIR$/temperature_highs_lows.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_visualization_exercise.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -38,6 +39,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../WeChat_message_retracted/WeChat_message_retracted.py" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
@@ -193,7 +195,7 @@
       <workItem from="1576201383861" duration="3792000" />
       <workItem from="1576241110685" duration="1036000" />
       <workItem from="1576304937493" duration="8330000" />
-      <workItem from="1576389783843" duration="5767000" />
+      <workItem from="1576389783843" duration="7385000" />
     </task>
     <task id="LOCAL-00001" summary="Preliminary access to data analysis and visualization operations">
       <created>1576204454568</created>
@@ -209,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576390023675</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="The preliminary temperature data analysis exercise in CSV format is over">
+      <created>1576398361140</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576398361140</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +240,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Preliminary access to data analysis and visualization operations" />
     <MESSAGE value="Combined with the matplotlib library and CSV library to achieve the distribution of the week's maximum temperature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Combined with the matplotlib library and CSV library to achieve the distribution of the week's maximum temperature" />
+    <MESSAGE value="The preliminary temperature data analysis exercise in CSV format is over" />
+    <option name="LAST_COMMIT_MESSAGE" value="The preliminary temperature data analysis exercise in CSV format is over" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Data_visualization$temperature_highs_lows.coverage" NAME="temperature_highs_lows Coverage Results" MODIFIED="1576395038354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
