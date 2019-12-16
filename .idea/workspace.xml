@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb3cb4b-922b-45ed-a6bf-678a22df2fc1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/btc_close_2017.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btc_close_2017.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btc_close_2017_urllib.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/收盘价折线图（￥）.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_visualization_exercise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btc_close_2017.json" beforeDir="false" afterPath="$PROJECT_DIR$/btc_close_2017.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +14,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="package.json" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -54,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.temperature_highs_lows">
+  <component name="RunManager" selected="Python.btc_close_2017">
     <configuration name="WeChat_message_retracted" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Data_visualization" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="different_dice" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="btc_close_2017" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Data_visualization" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,7 +106,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/different_dice.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/btc_close_2017.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,19 +182,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.different_dice" />
       <item itemvalue="Python.mpl_squares" />
       <item itemvalue="Python.scatter_squares" />
       <item itemvalue="Python.WeChat_message_retracted" />
       <item itemvalue="Python.temperature_highs_lows" />
+      <item itemvalue="Python.btc_close_2017" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.btc_close_2017" />
         <item itemvalue="Python.temperature_highs_lows" />
         <item itemvalue="Python.WeChat_message_retracted" />
         <item itemvalue="Python.scatter_squares" />
         <item itemvalue="Python.mpl_squares" />
-        <item itemvalue="Python.different_dice" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +211,11 @@
       <workItem from="1576201383861" duration="3792000" />
       <workItem from="1576241110685" duration="1036000" />
       <workItem from="1576304937493" duration="8330000" />
-      <workItem from="1576389783843" duration="7385000" />
+      <workItem from="1576389783843" duration="7520000" />
+      <workItem from="1576408212026" duration="6499000" />
+      <workItem from="1576420685161" duration="810000" />
+      <workItem from="1576460278650" duration="8030000" />
+      <workItem from="1576504871975" duration="3976000" />
     </task>
     <task id="LOCAL-00001" summary="Preliminary access to data analysis and visualization operations">
       <created>1576204454568</created>
@@ -218,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576398361140</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial exposure to json format files">
+      <created>1576399970302</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576399970302</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,9 +268,11 @@
     <MESSAGE value="Preliminary access to data analysis and visualization operations" />
     <MESSAGE value="Combined with the matplotlib library and CSV library to achieve the distribution of the week's maximum temperature" />
     <MESSAGE value="The preliminary temperature data analysis exercise in CSV format is over" />
-    <option name="LAST_COMMIT_MESSAGE" value="The preliminary temperature data analysis exercise in CSV format is over" />
+    <MESSAGE value="Initial exposure to json format files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial exposure to json format files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Data_visualization$temperature_highs_lows.coverage" NAME="temperature_highs_lows Coverage Results" MODIFIED="1576395038354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Data_visualization$btc_close_2017.coverage" NAME="btc_close_2017 Coverage Results" MODIFIED="1576509609131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
