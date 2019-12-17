@@ -58,7 +58,7 @@ def extract_json_data():
         closes.append(int(float((btc_dic['close']))))
         # print("{} is month {} week {}, {}, the close price is {} RMB".format(data, month, week, weekday, close))
 
-    return dates, closes
+    return dates, months, weeks, weekdays, closes
 
 
 def using_py_gal(dates, closes):
@@ -76,8 +76,6 @@ def using_py_gal(dates, closes):
     line_chart.add('收盘价', close_log)
     line_chart.render_to_file('收盘价折线图（￥）.svg')
 
-    # TODO x坐标轴上面数据异常
-
 
 def semi_logarithmic(dates, closes):
     import math
@@ -93,9 +91,50 @@ def semi_logarithmic(dates, closes):
     line_chart.render_to_file('收盘价对数变换折线图（￥）.svg')
 
 
+def draw_line(x_data, y_data, title, y_legend):
+    import pygal
+    from itertools import groupby
+
+    xy_map = []  # x,y的相关映射数据
+    for x, y in groupby(sorted(zip(x_data, y_data)), key=lambda _: _[0]):  # 对应取第一个元素进行压缩排序，后分组  # TODO 考究
+        y_list = [v for _, v in y]
+        xy_map.append([x, sum(y_list) / len(y_list)])  # 总和除以长度为平均值
+    x_unique, y_mean = [*zip(*xy_map)]  # TODO 解决不规范变黄问题
+    line_chart = pygal.Line()
+    line_chart.title = title
+    line_chart.x_labels = x_unique
+    line_chart.add(y_legend, y_mean)
+    line_chart.render_to_file(title + '.svg')
+    return line_chart  # 返回折线统计图对象
+
+
+def dash_board():
+    with open('收盘价Dashboard.html', 'w', encoding='utf-8') as html_file:
+        html_file.write('<html><head><title>收盘价Dashboard</title><meta charset="utf-8"></head><body>\n')
+        for svg in [
+            '收盘价折线图（￥）.svg', '收盘价对数变换折线图.svg', '收盘价月日均值（￥）.svg',
+            '收盘价周日均值（￥）.svg', '收盘价星期均值（￥）.svg'
+        ]:
+            html_file.write('    <object type="image/svg+xml" data="{0}" height=500></object>\n')
+
+
 if __name__ == '__main__':
-    # urllib_module()
+    # urllib_module()··
     # requests_module()
-    date, close = extract_json_data()
-    using_py_gal(date, close)
-    semi_logarithmic(date, close)
+    date, month, week, weekday, close = extract_json_data()
+    # using_py_gal(date, close)
+    # semi_logarithmic(date, close)
+
+    # idx_month = date.index('2017-12-01')
+    # line_chart_month = draw_line(month[:idx_month], close[:idx_month], '收盘价月日均值（￥）', '月日均值')
+
+    # idx_week = date.index('2017-12-11')
+    # line_chart_week = draw_line(week[1:idx_week], close[1:idx_week], '收盘价周日均值（￥）', '周日均值')
+
+    idx_week = date.index('2017-12-11')
+    wd = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']  # 相当于字典功能
+    weekdays_int = [wd.index(w) + 1 for w in weekday[1: idx_week]]
+    line_chart_weekday = draw_line(weekdays_int, close[1:idx_week], '收盘价星期均值（￥）', '星期均值')
+    # x轴默认会根据数据，从小到大排序
+    line_chart_weekday.x_labels = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+    line_chart_weekday.render_to_file('收盘价星期均值（￥）.svg')
